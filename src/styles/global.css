@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary-light: #007bff;
+    --color-primary: #0056b3;
+    --font-special: 'Lobster-Regular', sans-serif;
+}
+
+@font-face {
+    font-family: 'Lobster-Regular';
+    src: url('/fonts/Lobster-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }
