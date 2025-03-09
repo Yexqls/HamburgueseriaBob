@@ -3,6 +3,9 @@
 @theme {
     --color-primary-light: #007bff;
     --color-primary: #0056b3;
+    --color-secondary: #81131E;
+    --color-secondary2: #FFFFFF;
+
     --font-special: 'Lobster-Regular', sans-serif;
 }
 
