@@ -6,6 +6,7 @@ import '@fontsource/poppins/700.css'
 import './src/styles/global.css'
 const {title = 'Hamburguesas Bob'} = Astro.props
 
+
 ---
 
 <!doctype html>
@@ -32,17 +33,39 @@ const {title = 'Hamburguesas Bob'} = Astro.props
 </style>
 
 <script>
-	document.addEventListener('DOMContentLoaded', () => {
-	  const menuBtn = document.getElementById('menu-btn');
-	  const mobileMenu = document.getElementById('mobile-menu');
-  
-	  // Verifica si los elementos existen antes de añadir el evento
-	  if (menuBtn && mobileMenu) {
-		menuBtn.addEventListener('click', () => {
-		  mobileMenu.classList.toggle('hidden');
-		});
-	  } else {
-		console.error('No se encontraron los elementos necesarios para el menú desplegable.');
-	  }
-	});
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  // Mostrar/ocultar menú móvil
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Agregar animación de desplazamiento suave
+  navLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const href = link.getAttribute('href'); 
+      
+      // Validar que href existe y tiene el formato correcto
+      if (!href || !href.startsWith('/#')) return;
+
+      const targetId = href.substring(2); // Quita '/#'
+      const targetSection = document.getElementById(targetId);
+
+      // Validar que la sección existe antes de hacer scroll
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.warn(`No se encontró la sección con ID: ${targetId}`);
+      }
+    });
+  });
+});
+
   </script>

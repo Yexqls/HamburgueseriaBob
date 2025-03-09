@@ -2,53 +2,108 @@
 <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
   <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
     <!-- Logo -->
-    <a href="#" class="text-2xl font-bold text-gray-800">Bob</a>
+    <a
+      href="#hero"
+      class="text-2xl font-bold text-gray-800 flex items-center space-x-2"
+    >
+      <img src="/public/img/hamburguesa.png" alt="Logo" class="w-8 h-8" />
+      <span>Bob</span>
+    </a>
 
     <!-- Menú principal -->
     <div class="hidden md:flex space-x-6">
-      <a href="/#hero" class="text-gray-600 hover:text-gray-900">Inicio</a>
-      <a href="/#Menu" class="text-gray-600 hover:text-gray-900">Servicios</a>
-      <a href="/#Ordenar" class="text-gray-600 hover:text-gray-900">Contacto</a>
-      <a href="/#Filosofia" class="text-gray-600 hover:text-gray-900">Nosotros</a>
+      <a href="/#hero" class="nav-link text-gray-600 hover:text-gray-900"
+        ><i class="fa-solid fa-house"></i> Inicio</a
+      >
+      <a href="/#menu" class="nav-link text-gray-600 hover:text-gray-900"
+        ><i class="fa-solid fa-folder-open"></i> Servicios</a
+      >
+      <a href="/#ordenar" class="nav-link text-gray-600 hover:text-gray-900"
+        ><i class="fa-solid fa-phone"></i> Contacto</a
+      >
+      <a href="/#filosofia" class="nav-link text-gray-600 hover:text-gray-900"
+        ><i class="fa-solid fa-burger"></i> Nosotros</a
+      >
     </div>
 
     <!-- Botón del menú en móviles -->
     <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
     </button>
   </nav>
 
   <!-- Menú desplegable en móviles -->
   <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-    <a href="/#hero" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Inicio</a>
-    <a href="/#Menu" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Servicios</a>
-    <a href="/#Ordenar" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contacto</a>
-    <a href="/#Filosofia" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Nosotros</a>
+    <a
+      href="/#hero"
+      class="nav-link block px-4 py-2 text-gray-600 hover:bg-gray-100">Inicio</a
+    >
+    <a
+      href="/#menu"
+      class="nav-link block px-4 py-2 text-gray-600 hover:bg-gray-100"
+      >Servicios</a
+    >
+    <a
+      href="/#ordenar"
+      class="nav-link block px-4 py-2 text-gray-600 hover:bg-gray-100"
+      >Contacto</a
+    >
+    <a
+      href="/#filosofia"
+      class="nav-link block px-4 py-2 text-gray-600 hover:bg-gray-100"
+      >Nosotros</a
+    >
   </div>
 </header>
 
 <!-- Sección ajustada con padding-top para no quedar debajo de la navbar -->
 <section id="hero" class="bg-amber-50 min-h-screen py-8 flex pt-20">
   <div class="grid grid-cols-5 grid-rows-5 gap-4 max-w-5xl mx-auto">
-    <div class="col-span-4 row-span-3 rounded-2xl bg-amber-200 overflow-hidden flex">
-        <img class="w-full" src="/public/img/hamburguer.jpg" alt="imagen de hamburguesa">
+    <div
+      class="col-span-4 row-span-3 rounded-2xl bg-amber-200 overflow-hidden flex"
+    >
+      <img
+        class="w-full"
+        src="/public/img/hamburguer.jpg"
+        alt="imagen de hamburguesa"
+      />
     </div>
-    <div class="row-span-2 col-start-5 rounded-2xl bg-amber-300 text-3xl text-center font-black
-    justify-center items-center h-full flex"><span class="-rotate-3 flex flex-col relative overflow-hidden">Promocion en Hotdogs</span></div>
-    <div class="font-special row-span-2 col-start-5 row-start-3 rounded-2xl bg-amber-500 ">
+    <div
+      class="row-span-2 col-start-5 rounded-2xl bg-amber-300 text-3xl text-center font-black
+    justify-center items-center h-full flex"
+    >
+      <span class="-rotate-3 flex flex-col relative overflow-hidden"
+        >Promocion en Hotdogs</span>
+    </div>
+    <div
+      class=" row-span-2 col-start-5 row-start-3 rounded-2xl bg-amber-500"
+    >
       Promociones
     </div>
-    <div class="col-span-2 row-start-4 rounded-2xl bg-amber-700 ">
-      <a href="/#Ubicacion">Ubicanos
+    <div
+      class="col-span-2 row-start-4 rounded-2xl bg-amber-300 text-3xl text-center font-black
+    justify-center items-center h-full flex"
+    >
+      <a href="/#ubicacion" class="flex items-center justify-center space-x-2">
+        <span class="text-center">Ubicanos</span>
+        <img src="/public/img/ubicacion.png" alt="Ubicación" class="w-6 h-6" />
       </a>
     </div>
+
     <div class="col-span-2 col-start-3 row-start-4 rounded-2xl bg-amber-950">
       5
     </div>
   </div>
 </section>
-
-
-
