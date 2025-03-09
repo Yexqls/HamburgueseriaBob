@@ -50,19 +50,5 @@
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
 
-    // Verifica si los elementos existen antes de añadir el evento
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    } else {
-      console.error('No se encontraron los elementos necesarios para el menú desplegable.');
-    }
-  });
-</script>
 
